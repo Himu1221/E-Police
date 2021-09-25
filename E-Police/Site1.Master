@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="E_Police.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+
+    <%--bootstrap js--%>
+   
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+
+
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   
+     
+</head>
+<body style="background-color:#303841;">
+     
+    <form id="form1" runat="server" >
+       <!-- <div style="background-image: url('/imgs/grey.jpg'); height: 486px;">-->
+        <div >
+
+        
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#" style="color:black">
+               <div class="card"><img src="imgs/crime.png" width="30" height="30" style="align-content:center" />
+                    <b>E-CRS</b>
+                   </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color:#00ADB5;">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active">
+                                <a class="nav-link" href="homepage.aspx" style="color:white">Home</a>
+                                
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#" style="color:white">About Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#" style="color:white">Terms</a>
+                        </li>
+ 
+                    </ul>
+ 
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" style="color:white" CausesValidation="False">User Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" style="color:white" CausesValidation="False">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click" style="color:white" CausesValidation="False">Logout</asp:LinkButton>
+                        </li>
+ 
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False" style="color:white">Hello user</asp:LinkButton>
+ 
+                        </li>
+                    </ul>
+                </div>
+
+        </nav>
+    </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+         <footer>
+            <div id="footer1" class="container-fluid" style="background-color:#00ADB5; position:fixed; padding:10px 10px 0px 10px; bottom:0; width:100%; height:40px">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click" CausesValidation="False">Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" OnClick="LinkButton11_Click"  CausesValidation="False">Employee Login</asp:LinkButton>
+                            &nbsp;
+                             <asp:LinkButton class="footerlinks" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click"  CausesValidation="False">User Profile</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton5" runat="server" OnClick="LinkButton5_Click"  CausesValidation="False">File Report</asp:LinkButton>
+                            &nbsp;
+                             <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" OnClick="LinkButton8_Click" CausesValidation="False" >Missing Report</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton15" runat="server" OnClick="LinkButton15_Click" CausesValidation="False" >View Response</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server" OnClick="LinkButton9_Click" CausesValidation="False">Any Issues</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" OnClick="LinkButton10_Click" CausesValidation="False">Employee Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" CausesValidation="False">User Issues</asp:LinkButton>
+                            &nbsp;
+                             <asp:LinkButton class="footerlinks" ID="LinkButton13" runat="server" OnClick="LinkButton13_Click" CausesValidation="False">View Cases</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton14" runat="server" OnClick="LinkButton14_Click" CausesValidation="False">Update Response</asp:LinkButton>
+                             &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton16" runat="server" OnClick="LinkButton16_Click" CausesValidation="False">View Missing Report</asp:LinkButton>
+                          </p>
+ 
+                    </div>
+ 
+                </div>
+            </div>
+        
+ 
+        </footer>
+            </div>
+    </form>
+</body>
+</html>
